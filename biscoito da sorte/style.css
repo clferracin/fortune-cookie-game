@@ -1,0 +1,180 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root{
+  font-size: 62.5%;
+
+  --color-white: #FFFFFF;
+  --color-black: #000000;
+  --color-dark-pink: #34355B;
+  --color-btn: #FF9500;
+  --color-btn-hover: #FF9545;
+  --color-fortune-p: #E4EDF1;
+  --color-body-bg: linear-gradient(45deg, #190361 0%, #B0F 100%);
+
+  --ft-h1: 'Montserrat', sans-serif;
+  --ft-scr1-p: 'DM Sans', sans-serif;
+  --ft-scr2-p: 'Dancing Script', cursive;
+}
+
+body{
+  font-size: 1.6rem;
+  background: var(--color-body-bg);
+  animation: gradient 10s ease infinite;
+  background-size: 200% 200%;
+
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+
+.hide {
+  display:none;
+}
+
+h1 {
+  font-family: var(--ft-h1);
+  color: var(--color-dark-pink);
+  font-size: 2.4rem;
+  line-height: 2.9rem;
+  font-weight: 700;
+}
+
+.page {
+  text-align: center;
+}
+
+.screen1,
+.screen2 {
+  border-radius: .5rem;
+  background: var(--color-white);
+  box-shadow: 0 2rem 5rem 0 rgba(0, 0, 0, 0.80);
+}
+
+.screen1 {
+  padding: 4.8rem 6.4rem 6.4rem 6.4rem;
+  margin: 0 auto;
+  width: 42.8rem;
+}
+
+.screen1 h1 {
+  margin-bottom: 1.4rem;
+}
+
+.screen1 p {
+  font-family: var(--ft-scr1-p);
+  color: var(--color-dark-pink);
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 2rem;
+  margin-bottom: 2rem;
+}
+
+.screen1 img {
+
+}
+
+.screen1 img:hover {
+  cursor: pointer;
+
+    /* Start the shake animation and make the animation last for 0.5 seconds */
+    animation: shake 0.5s;
+
+    /* When the animation is finished, start again */
+    animation-iteration-count: infinite;
+}
+
+.screen2 {
+  padding: 4.8rem 6.4rem;
+  width: 42.8rem;
+}
+
+.screen2 h1 {
+  margin-bottom: 1.7rem;
+}
+
+.screen2 p {
+  font-family: var(--ft-scr2-p);
+  color: var(--color-black);
+  font-size: 2.4rem;
+  font-weight: 400;
+  line-height: 2.9rem;
+  margin-bottom: 1.7rem;
+  width: 30rem;
+  background: var(--color-fortune-p);
+  padding: 1rem;
+  box-shadow: .2rem .2rem .2rem 0 rgba(85, 85, 85, 0.50);
+  animation: scale .7s;
+
+}
+
+.screen2 img {
+  margin-bottom: 1.7rem;
+  padding: 4.3rem 0;
+}
+
+.screen2 .button {
+  font-family: var(--ft-scr1-p);
+  color: var(--color-white);
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 2rem;
+
+  border-radius: .4rem;
+  background: var(--color-btn);
+  border: none;
+  padding: 1.6rem;
+  transition: .3s;
+}
+
+.screen2 .button:hover {
+  cursor:pointer;
+  background: var(--color-btn-hover);
+
+}
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+@keyframes scale {
+  0% { transform: scale(0.0) translate(0rem, 280rem);}
+  10% { transform: scale(0.1)  translate(0rem, 120rem);}
+  20% { transform: scale(0.2)  translate(0rem, 70rem);}
+  30% { transform: scale(0.3)  translate(0rem, 50rem);}
+  40% { transform: scale(0.4)  translate(0rem, 35rem);}
+  50% { transform: scale(0.5)  translate(0rem, 20rem);}
+  60% { transform: scale(0.6)  translate(0rem, 10rem);}
+  70% { transform: scale(0.7)  translate(0rem, 7rem);}
+  80% { transform: scale(0.8)  translate(0rem, 4rem);}
+  90% { transform: scale(0.9)  translate(0rem, 2rem);}
+  100% { transform: scale(1.0) translate(0rem, 0rem);}
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
